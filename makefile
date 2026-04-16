@@ -1,6 +1,18 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2026/04/16 11:52:23 by rodrpere          #+#    #+#              #
+#    Updated: 2026/04/16 11:52:53 by rodrpere         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME = libft.a
-CC = gcc
-CFLAGS = -Wall -Wextra -Werror -I includes
+CC = cc
+CFLAGS = -Wall -Wextra -Werror 
 
 SRCS = $(wildcard srcs/*.c)
 OBJS = $(SRCS:.c=.o)
@@ -8,10 +20,10 @@ OBJS = $(SRCS:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar rcs $(NAME) $(OBJS)
+	ar rcs $(NAME) $(OBJS) $^
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -I includes -c $< -o $@
 
 clean:
 	rm -f $(OBJS)

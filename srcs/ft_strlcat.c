@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/04/16 11:51:21 by rodrpere          #+#    #+#             */
+/*   Updated: 2026/04/16 11:51:31 by rodrpere         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-size_t ft_strlcat(char* restrict dst, const char* restrict src, size_t dstsize)
+size_t ft_strlcat(char* dst, const char* src, size_t dstsize)
 {
 	size_t dlen = ft_strlen(dst);
 	size_t slen = ft_strlen(src);
