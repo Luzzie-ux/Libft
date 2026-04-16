@@ -5,22 +5,20 @@ it should be following a simple way to do them and in the process, understand th
 Here is the checklist:
 # PHASE 1 — Core Basics
 
-* [ ] `ft_strlen`
-* [ ] `ft_memset`
-* [ ] `ft_bzero`
+* [o] `ft_strlen`
+* [o] `ft_memset`
+* [o] `ft_bzero`
 
 ---
 
 # PHASE 2 — Core Memory Handling
 
-* [ ] `ft_memcpy`
-* [ ] `ft_memmove`
+* [o] `ft_memcpy`
+* [o] `ft_memmove`
 
 ---
 
 # PHASE 3 — String Copying
-
-You now apply memory logic to strings.
 
 * [ ] `ft_strlcpy`
 * [ ] `ft_strlcat`
