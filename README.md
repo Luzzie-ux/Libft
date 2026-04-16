@@ -20,8 +20,8 @@ Here is the checklist:
 
 # PHASE 3 — String Copying
 
-* [ ] `ft_strlcpy`
-* [ ] `ft_strlcat`
+* [o] `ft_strlcpy`
+* [o] `ft_strlcat`
 
 ---
 
