@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 11:52:16 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/04/16 11:52:17 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/04/16 16:37:20 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,17 @@ int main() {
 
     printf("Before strlcpy: %s\n", d2);
     ft_strlcpy(d2, s2, sizeof(d2));
-    printf("After strlcpy: %s\n", d2); 
-    return 0;
+    printf("After strlcpy: %s\n", d2);
+
+    char    c;
+    int     result;
+
+    printf("Choose a letter:");
+    scanf("%s", &c);
+    result = ft_isalpha(c);
+    if (result == 1)
+	    printf("True char:%d\n", result);
+    else
+	    printf("Not true char:%d\n", result);
+    return (0);
 }
