@@ -6,15 +6,15 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 11:53:13 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/04/16 12:51:52 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/04/16 13:00:07 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
-#define LIBFT_H
+# define LIBFT_H
 
-#include <stdlib.h>
-#include <unistd.h>
+# include <stdlib.h>
+# include <unistd.h>
 
 //prototipos
 size_t	ft_strlen(const char *s);
