@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 11:52:16 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/04/17 14:43:54 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/04/17 14:58:09 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@
 
 int main() {
     printf("Starting main program\n");	
-    char src[6] = "that!";
+    
+	char src[6] = "that!";
     char dst[50]= "This and ";
     char s2[6] = "ellif";
     char d2[6] = "souma";
@@ -45,6 +46,7 @@ int main() {
     else
 	    printf("Not true char:%d\n", result);
 
+	
 	result = ft_isalnum(c);
     if (result == 1)
 	    printf("Is AlNum:%d\n", result);

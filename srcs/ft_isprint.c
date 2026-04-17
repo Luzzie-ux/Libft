@@ -6,13 +6,13 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 11:52:12 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/04/17 14:42:39 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/04/17 14:58:27 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
 	return (c >= 32 && c<= 126);
 }
