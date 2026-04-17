@@ -6,14 +6,16 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 11:52:16 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/04/16 16:37:20 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/04/17 11:51:01 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
+#include <string.h>
 
-int main() { 
+int main() {
+    printf("Starting main program\n");	
     char src[6] = "that!";
     char dst[50]= "This and ";
     char s2[6] = "ellif";
@@ -28,14 +30,30 @@ int main() {
     printf("After strlcpy: %s\n", d2);
 
     char    c;
+    int     n;
     int     result;
+    char    input[64];
 
     printf("Choose a letter:");
-    scanf("%s", &c);
+    fgets(input, sizeof(input), stdin);
+    input[strcspn(input, "\n")] = '\0';
+
+    c = input[0];
     result = ft_isalpha(c);
     if (result == 1)
 	    printf("True char:%d\n", result);
     else
 	    printf("Not true char:%d\n", result);
+
+    printf("Choose a number:");
+    fgets(input, sizeof(input), stdin);
+    input[strcspn(input, "\n")] = '\0';
+
+    n = input[0];
+    result = ft_isdigit(n);
+    if (result == 1)
+	    printf("True Num:%d\n", result);
+    else
+	    printf("Not Num:%d\n", result);
     return (0);
 }

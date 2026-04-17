@@ -6,8 +6,19 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 11:51:58 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/04/16 12:40:51 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/04/17 11:26:22 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+int	ft_isalnum(int c)
+{
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+		return (1);
+	else if(c >= 0 && c <= 9)
+		return (1);
+	else
+		return (0);
+}
+

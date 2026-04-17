@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 11:52:09 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/04/16 16:59:55 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/04/17 11:49:23 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 int	ft_isdigit(int c)
 {
-	if(c >= '0' || c <= '9')
+	if(c >= '0' && c <= '9')
 		return (1);
-	else if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+	else
 		return (0);
 }
-#include <stdio.h>
+/*#include <stdio.h>
 int	main(void)
 {
 	int	c;
@@ -33,4 +33,4 @@ int	main(void)
 	else
 		printf("Not Num:%d\n", result);
 	return (0);
-}
+}*/
