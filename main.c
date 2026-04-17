@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 11:52:16 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/04/17 15:14:52 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/04/17 15:44:03 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include <string.h>
 
 int main() {
+	int		result;
 	printf("Starting main program...\n");
 
 	//var for strlcat
@@ -34,7 +35,6 @@ int main() {
 	//vars for isalpha, isdigit, alnum
 	char	c;
 	int		n;
-	int		result;
 	char	input[64];
 	
 	//isalpha and alnum
@@ -78,16 +78,17 @@ int main() {
 	}
 
 	// var for ascii
-	char	i;
-	int		k;
-	printf("Choose:");
+	int		num;
+	printf("Choose a number between 0 - 127:");
 	fgets(input, sizeof(input), stdin);
 	input[strcspn(input, "\n")] = '\0';
-
-	i = input[0];
-	printf("%d\n", ft_isascii(i));
-
-	k = input[0];
-	printf("%d\n", ft_isascii(k));
+	num = atoi(input);
+	
+	result = ft_isascii(num);
+	if (result == 1)
+		printf("Is Ascii:%d\n", result);
+	else{
+		printf("Not Ascii:%d\n", result);
+	}
 	return (0);
 }
