@@ -13,82 +13,84 @@
 #include "libft.h"
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
+
+static void test_fstrlcpy(void)
+{
+	char src[6] = "ellif";
+        char dst[6] = "souma";
+	
+	printf("1. strlcpy:\n");
+        printf("Before: %s\n", dst);
+        ft_strlcpy(dst, src, sizeof(dst));
+        printf("After: %s\n", dst);
+}
+
+static void test_fstrlcat(void)
+{
+        char src[6] = "that!";
+        char dst[50]= "This and ";
+
+	printf("2. strlcat:\n");
+        printf("Before: %s\n", dst);
+        ft_strlcat(dst, src, sizeof(dst));
+        printf("After: %s\n", dst);
+}
+
+static void test_fifis(void)
+{
+
+	char	input[64];
+	char	c;
+
+	printf("3. isalpha / isdigit / isalnum:\n");
+	printf("Choose a character: ");
+	fgets(input, sizeof(input), stdin);
+	input[strcspn(input, "\n")] = '\0';
+	c = input[0];
+
+	printf("isalpha('%c'): %s\n", c, ft_isalpha(c) ? "true" : "false");
+	printf("isdigit('%c'): %s\n", c, ft_isdigit(c) ? "true" : "false");
+	printf("isalnum('%c'): %s\n\n", c, ft_isalnum(c) ? "true" : "false");
+}
+
+static void test_fisascii(void)
+{
+	char	input[64];
+        int	num;
+
+	printf("4.isascii:\n");
+        printf("Choose a number between 0 - 127:");
+        fgets(input, sizeof(input), stdin);
+        input[strcspn(input, "\n")] = '\0';
+        num = atoi(input);
+
+	printf("isascii(%d): %s\n\n", num, ft_isascii(num) ? "true" : "false");
+}
+
+static void test_isprint(void)
+{
+	char	input[64];
+	int	num;
+
+	printf("5.isprint:\n");
+	printf("Choose a printable characters:\n");
+	fgets(input, sizeof(input), stdin);
+	input[strcspn(input, "\n")] = '\0';
+	num = atoi(input);
+
+	printf("isprint(%d): %s\n\n", num, ft_isprint(num) ? "true": "false");
+}
 
 int main() {
 	int		result;
 	printf("Starting main program...\n");
 
-	//var for strlcat
-	char src[6] = "that!";
-	char dst[50]= "This and ";
-	printf("Before strlcat: %s\n", dst);
-	ft_strlcat(dst, src, sizeof(dst));
-	printf("After strlcat: %s\n", dst);
+	test_fstrlcpy();
+	test_fstrlcat();
+	test_fifis();
+	test_fisascii();
+	test_isprint();
 
-	//var for strlcpy
-	char s2[6] = "ellif";
-	char d2[6] = "souma";
-	printf("Before strlcpy: %s\n", d2);
-	ft_strlcpy(d2, s2, sizeof(d2));
-	printf("After strlcpy: %s\n", d2);
-
-	//vars for isalpha, isdigit, alnum
-	char	c;
-	int		n;
-	char	input[64];
-	
-	//isalpha and alnum
-	printf("Choose a letter:");
-	fgets(input, sizeof(input), stdin);
-	input[strcspn(input, "\n")] = '\0';
-
-	c = input[0];
-	result = ft_isalpha(c);
-	if (result == 1)
-		printf("True char:%d\n", result);
-	else{
-		printf("Not true char:%d\n", result);
-	}
-
-	result = ft_isalnum(c);
-	if (result == 1)
-		printf("Is AlNum:%d\n", result);
-	else{
-		printf("Not AlNum:%d\n", result);
-	}
-
-	//isdigit and alnum
-	printf("Choose a number:");
-	fgets(input, sizeof(input), stdin);
-	input[strcspn(input, "\n")] = '\0';
-
-	n = input[0];
-	result = ft_isdigit(n);
-	if (result == 1)
-		printf("True Num:%d\n", result);
-	else{
-		printf("Not Num:%d\n", result);
-	}
-
-	result = ft_isalnum(n);
-	if (result == 1)
-		printf("Is AlNum:%d\n", result);
-	else{
-		printf("Not AlNum:%d\n", result);
-	}
-
-	// var for ascii
-	int		num;
-	printf("Choose a number between 0 - 127:");
-	fgets(input, sizeof(input), stdin);
-	input[strcspn(input, "\n")] = '\0';
-	num = atoi(input);
-	
-	result = ft_isascii(num);
-	if (result == 1)
-		printf("Is Ascii:%d\n", result);
-	else{
-		printf("Not Ascii:%d\n", result);
-	}
 	return (0);
 }
