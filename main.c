@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 11:52:16 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/04/17 11:51:01 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/04/17 14:43:54 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,12 @@ int main() {
     else
 	    printf("Not true char:%d\n", result);
 
+	result = ft_isalnum(c);
+    if (result == 1)
+	    printf("Is AlNum:%d\n", result);
+    else
+	    printf("Not AlNum:%d\n", result);
+
     printf("Choose a number:");
     fgets(input, sizeof(input), stdin);
     input[strcspn(input, "\n")] = '\0';
@@ -55,5 +61,23 @@ int main() {
 	    printf("True Num:%d\n", result);
     else
 	    printf("Not Num:%d\n", result);
+    result = ft_isalnum(n);
+    if (result == 1)
+	    printf("Is AlNum:%d\n", result);
+    else
+	    printf("Not AlNum:%d\n", result);
+
+    char	i;
+    int		k;
+
+    printf("Choose:");
+    fgets(input, sizeof(input), stdin);
+    input[strcspn(input, "\n")] = '\0';
+
+    i = input[0];
+    printf("%d\n", ft_isascii(i));
+
+    k = input[0];
+    printf("%d\n", ft_isascii(k));
     return (0);
 }

@@ -6,8 +6,13 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 11:52:07 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/04/16 12:40:57 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/04/17 14:42:25 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+int	ft_isascii(int c)
+{
+	return (c >= 0 && c<= 127);
+}
