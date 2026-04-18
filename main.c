@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 11:52:16 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/04/18 20:18:09 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/04/18 23:06:16 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,31 +15,30 @@
 #include <string.h>
 #include <stdlib.h>
 
-static void test_fstrlcpy(void)
+static void	test_fstrlcpy(void)
 {
 	char src[6] = "ellif";
-    char dst[6] = "souma";
+	char dst[6] = "souma";
 	
 	printf("1. strlcpy:\n");
-    printf("Before: %s\n", dst);
-    ft_strlcpy(dst, src, sizeof(dst));
-    printf("After: %s\n", dst);
+	printf("Before: %s\n", dst);
+	ft_strlcpy(dst, src, sizeof(dst));
+	printf("After: %s\n", dst);
 }
 
-static void test_fstrlcat(void)
+static void	test_fstrlcat(void)
 {
-    char src[6] = "that!";
-    char dst[50]= "This and ";
+	char src[6] = "that!";
+	char dst[50]= "This and ";
 
 	printf("2. strlcat:\n");
-    printf("Before: %s\n", dst);
-    ft_strlcat(dst, src, sizeof(dst));
-    printf("After: %s\n", dst);
+	printf("Before: %s\n", dst);
+	ft_strlcat(dst, src, sizeof(dst));
+	printf("After: %s\n", dst);
 }
 
-static void test_fifis(void)
+static void	test_fifis(void)
 {
-
 	char	input[64];
 	char	c;
 
@@ -54,43 +53,27 @@ static void test_fifis(void)
 	printf("isalnum('%c'): %s\n\n", c, ft_isalnum(c) ? "true" : "false");
 }
 
-static void test_fisascii(void)
+static void	test_fASCII(void)
 {
-	char	input[64];
-    int		num;
-
-	printf("4.isascii:\n");
-    printf("Choose a number between 0 - 127:");
-    fgets(input, sizeof(input), stdin);
-    input[strcspn(input, "\n")] = '\0';
-    num = atoi(input);
-
-	printf("isascii(%d): %s\n\n", num, ft_isascii(num) ? "true" : "false");
-}
-
-static void test_isprint(void)
-{
-	char	input[64];
+	char	input;
 	int		num;
 
-	printf("5.isprint:\n");
-	printf("Choose a printable characters:\n");
-	fgets(input, sizeof(input), stdin);
-	input[strcspn(input, "\n")] = '\0';
-	num = atoi(input);
+	printf("4.isascii & isprint:\n");
+	printf("Choose an ascii character:\n");
+	scanf("%c", &input);
 
-	printf("isprint(%d): %s\n\n", num, ft_isprint(num) ? "true": "false");
+	num = (int) input;
+	printf("is it ascii(%d): %s\n\n", num, ft_isascii(num) ? "true" : "false");
+	printf("is it print(%d): %s\n\n", num, ft_isprint(num) ? "true": "false");
 }
 
-int main(void)
+int	main(void)
 {
 	printf("Starting main program...\n");
 
 	test_fstrlcpy();
 	test_fstrlcat();
 	test_fifis();
-	test_fisascii();
-	test_isprint();
-
+	test_fASCII();
 	return (0);
 }
