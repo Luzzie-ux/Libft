@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 11:52:16 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/04/17 15:44:03 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/04/18 20:18:09 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,23 +18,23 @@
 static void test_fstrlcpy(void)
 {
 	char src[6] = "ellif";
-        char dst[6] = "souma";
+    char dst[6] = "souma";
 	
 	printf("1. strlcpy:\n");
-        printf("Before: %s\n", dst);
-        ft_strlcpy(dst, src, sizeof(dst));
-        printf("After: %s\n", dst);
+    printf("Before: %s\n", dst);
+    ft_strlcpy(dst, src, sizeof(dst));
+    printf("After: %s\n", dst);
 }
 
 static void test_fstrlcat(void)
 {
-        char src[6] = "that!";
-        char dst[50]= "This and ";
+    char src[6] = "that!";
+    char dst[50]= "This and ";
 
 	printf("2. strlcat:\n");
-        printf("Before: %s\n", dst);
-        ft_strlcat(dst, src, sizeof(dst));
-        printf("After: %s\n", dst);
+    printf("Before: %s\n", dst);
+    ft_strlcat(dst, src, sizeof(dst));
+    printf("After: %s\n", dst);
 }
 
 static void test_fifis(void)
@@ -57,13 +57,13 @@ static void test_fifis(void)
 static void test_fisascii(void)
 {
 	char	input[64];
-        int	num;
+    int		num;
 
 	printf("4.isascii:\n");
-        printf("Choose a number between 0 - 127:");
-        fgets(input, sizeof(input), stdin);
-        input[strcspn(input, "\n")] = '\0';
-        num = atoi(input);
+    printf("Choose a number between 0 - 127:");
+    fgets(input, sizeof(input), stdin);
+    input[strcspn(input, "\n")] = '\0';
+    num = atoi(input);
 
 	printf("isascii(%d): %s\n\n", num, ft_isascii(num) ? "true" : "false");
 }
@@ -71,7 +71,7 @@ static void test_fisascii(void)
 static void test_isprint(void)
 {
 	char	input[64];
-	int	num;
+	int		num;
 
 	printf("5.isprint:\n");
 	printf("Choose a printable characters:\n");
@@ -82,8 +82,8 @@ static void test_isprint(void)
 	printf("isprint(%d): %s\n\n", num, ft_isprint(num) ? "true": "false");
 }
 
-int main() {
-	int		result;
+int main(void)
+{
 	printf("Starting main program...\n");
 
 	test_fstrlcpy();
