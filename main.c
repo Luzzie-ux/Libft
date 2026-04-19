@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 11:52:16 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/04/18 23:06:16 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/04/19 21:08:01 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static void	test_fstrlcpy(void)
 	printf("1. strlcpy:\n");
 	printf("Before: %s\n", dst);
 	ft_strlcpy(dst, src, sizeof(dst));
-	printf("After: %s\n", dst);
+	printf("After: %s\n\n", dst);
 }
 
 static void	test_fstrlcat(void)
@@ -34,7 +34,7 @@ static void	test_fstrlcat(void)
 	printf("2. strlcat:\n");
 	printf("Before: %s\n", dst);
 	ft_strlcat(dst, src, sizeof(dst));
-	printf("After: %s\n", dst);
+	printf("After: %s\n\n", dst);
 }
 
 static void	test_fifis(void)
@@ -64,16 +64,47 @@ static void	test_fASCII(void)
 
 	num = (int) input;
 	printf("is it ascii(%d): %s\n\n", num, ft_isascii(num) ? "true" : "false");
-	printf("is it print(%d): %s\n\n", num, ft_isprint(num) ? "true": "false");
+	printf("is it print(%d): %s\n", num, ft_isprint(num) ? "true": "false");
 }
+
+/*static void	test_fccase()
+{
+	char	input;
+	int		num;
+	printf("5.tolower & toupper:\n");
+	printf("Choose an ascii character:\n");
+	scanf("%c", &input);
+	num = (int)input;
+}*/
 
 int	main(void)
 {
+	int	option;
+	int ch;
 	printf("Starting main program...\n");
-
-	test_fstrlcpy();
-	test_fstrlcat();
-	test_fifis();
-	test_fASCII();
-	return (0);
+	printf("select an option:\n1. strlcpy.\n2. strlcat.\n3. isalpha / isdigit / isalnum.\n4. isascii & isprint.\n5. tolower & toupper.\n");
+	scanf("%d", &option);
+	while ((ch = getchar()) != '\n' && ch != EOF)
+    	continue;
+	switch (option)
+	{
+		case 1:
+			test_fstrlcpy();
+			break;
+		case 2:
+			test_fstrlcat();
+			break;
+		case 3:
+			test_fifis();
+			break;
+		case 4:
+			test_fASCII();
+			break;
+		/*case 5:
+			test_fccase();
+			break;*/
+		default:
+			printf("Error: Select a valid option\n");
+	}
+	return (printf("\nYou have reached the end of the program\nExiting..."));;
 }
