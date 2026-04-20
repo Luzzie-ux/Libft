@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 11:52:16 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/04/20 13:06:06 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/04/20 15:10:45 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,15 +81,41 @@ static void	test_fccase()
 	printf("uppercase of (%c) is: %c\n",num, ft_toupper(num));
 }
 
+static void test_posix()
+{
+	const char	*search;
+	char		input[64];
+	char		c;
+
+	printf("6. strchr & strrchr:\n");
+
+	printf("Write a string: ");
+	fgets(input, sizeof(input), stdin);
+	input[strcspn(input, "\n")] = '\0';
+	printf("Choose a char:");
+	scanf("%c", &c);
+
+	search = ft_strchr(input, c);
+	if (search != NULL)
+		printf("Character '%c' found at position: %ld\n", c, search - input);
+	else
+		printf("Character '%c' not found.\n", c);
+	search = ft_strrchr(input, c);
+	if (search != NULL)
+		printf("Character '%c' found at position: %ld\n", c, search - input);
+	else
+		printf("Character '%c' not found.\n", c);
+}
+
 int	main(void)
 {
 	int	option;
 	int ch;
 	printf("Starting main program...\n");
-	printf("select an option:\n1. strlcpy.\n2. strlcat.\n3. isalpha / isdigit / isalnum.\n4. isascii & isprint.\n5. tolower & toupper.\n");
+	printf("select an option:\n1. strlcpy.\n2. strlcat.\n3. isalpha / isdigit / isalnum.\n4. isascii & isprint.\n5. tolower & toupper.\n6. strchr & strrchr.\n");
 	scanf("%d", &option);
 	while ((ch = getchar()) != '\n' && ch != EOF)
-    	continue;
+		continue;
 	switch (option)
 	{
 		case 1:
@@ -106,6 +132,9 @@ int	main(void)
 			break;
 		case 5:
 			test_fccase();
+			break;
+		case 6:
+			test_posix();
 			break;
 		default:
 			printf("Error: Select a valid option\n");
