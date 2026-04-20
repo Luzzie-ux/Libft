@@ -6,13 +6,13 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/18 21:01:14 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/04/18 21:05:23 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/04/20 13:05:32 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 	{

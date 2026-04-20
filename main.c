@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 11:52:16 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/04/19 21:08:01 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/04/20 13:06:06 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,15 +67,19 @@ static void	test_fASCII(void)
 	printf("is it print(%d): %s\n", num, ft_isprint(num) ? "true": "false");
 }
 
-/*static void	test_fccase()
+static void	test_fccase()
 {
 	char	input;
 	int		num;
+
 	printf("5.tolower & toupper:\n");
-	printf("Choose an ascii character:\n");
+	printf("Choose an character:\n");
 	scanf("%c", &input);
+
 	num = (int)input;
-}*/
+	printf("lowercase of (%c) is: %c\n",num, ft_tolower(num));
+	printf("uppercase of (%c) is: %c\n",num, ft_toupper(num));
+}
 
 int	main(void)
 {
@@ -100,9 +104,9 @@ int	main(void)
 		case 4:
 			test_fASCII();
 			break;
-		/*case 5:
+		case 5:
 			test_fccase();
-			break;*/
+			break;
 		default:
 			printf("Error: Select a valid option\n");
 	}
