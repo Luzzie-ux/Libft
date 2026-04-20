@@ -27,21 +27,21 @@ Here is the checklist:
 
 # PHASE 4 — Character Functions
 
-* [ ] `ft_isalpha`
-* [ ] `ft_isdigit`
-* [ ] `ft_isalnum`
-* [ ] `ft_isascii`
-* [ ] `ft_isprint`
-* [ ] `ft_toupper`
-* [ ] `ft_tolower`
+* [o] `ft_isalpha`
+* [o] `ft_isdigit`
+* [o] `ft_isalnum`
+* [o] `ft_isascii`
+* [o] `ft_isprint`
+* [o] `ft_toupper`
+* [o] `ft_tolower`
 
 ---
 
 # PHASE 5 — Searching & Comparing
 
-* [ ] `ft_strchr`
-* [ ] `ft_strrchr`
-* [ ] `ft_strncmp`
+* [o] `ft_strchr`
+* [o] `ft_strrchr`
+* [o] `ft_strncmp`
 * [ ] `ft_memchr`
 * [ ] `ft_memcmp`
 * [ ] `ft_strnstr`
