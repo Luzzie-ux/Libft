@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 11:52:16 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/04/20 15:10:45 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/04/20 19:31:26 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,10 +85,9 @@ static void test_posix()
 {
 	const char	*search;
 	char		input[64];
-	char		c;
+	char		c ;
 
 	printf("6. strchr & strrchr:\n");
-
 	printf("Write a string: ");
 	fgets(input, sizeof(input), stdin);
 	input[strcspn(input, "\n")] = '\0';
@@ -97,14 +96,14 @@ static void test_posix()
 
 	search = ft_strchr(input, c);
 	if (search != NULL)
-		printf("Character '%c' found at position: %ld\n", c, search - input);
+		printf("Character %c found at position: %ld\n", c, search - input);
 	else
-		printf("Character '%c' not found.\n", c);
+		printf("Character %c not found.\n", c);
 	search = ft_strrchr(input, c);
 	if (search != NULL)
-		printf("Character '%c' found at position: %ld\n", c, search - input);
+		printf("Character %c found at position: %ld\n", c, search - input);
 	else
-		printf("Character '%c' not found.\n", c);
+		printf("Character %c not found.\n", c);
 }
 
 int	main(void)

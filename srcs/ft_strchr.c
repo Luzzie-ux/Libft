@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 13:17:18 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/04/20 14:43:25 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/04/20 19:30:41 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char *ft_strchr(const char *s, int c)
 	{
 		return ((char *)&s[i]);
 	}
-	return ((char *)&s[i]);
+	return (NULL);
 }
 /*#include <stdio.h>
 #include <string.h>
