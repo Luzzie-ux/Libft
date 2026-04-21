@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 11:51:02 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/04/16 12:57:50 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/04/21 12:23:06 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	unsigned const char	*ps;
 	unsigned char		*pd;
 
-	ps = src;
-	pd = dest;
+	ps = (unsigned const char *)src;
+	pd = (unsigned char *)dest;
 	while (n > 0)
 	{
 		*pd = *ps;
