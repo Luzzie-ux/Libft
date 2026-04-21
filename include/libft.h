@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 11:53:13 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/04/20 19:59:04 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/04/21 18:29:39 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
-int		ft_atoi(const char * str);
+int		ft_atoi(const char * nptr);
+void	*malloc(size_t size);
+char	*strdup(const char *s);
 
 #endif
