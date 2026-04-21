@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 14:43:57 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/04/20 19:39:34 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/04/21 20:59:43 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (i < n && s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0')
