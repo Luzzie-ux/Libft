@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 12:23:18 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/04/21 13:02:42 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/04/21 20:59:23 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int					i;
+	size_t				i;
 	unsigned const char	*str1;
 	unsigned const char	*str2;
 
