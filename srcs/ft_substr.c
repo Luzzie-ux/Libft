@@ -1,4 +1,4 @@
-/* ************************************************************************** */
+ /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
@@ -14,11 +14,17 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	sub;
-	int		i;
-	int		j;
+	char	*sub;
 
-	while(i < 64)
-		i++;
-	return (s);
+	if (!s)
+		return (NULL);
+	else if(start >= ft_strlen(s))
+		return (ft_strdup(""));
+	if (len > ft_strlen(s) - start)
+	len = ft_strlen(s); - start;
+	sub = (char *)malloc(sizeof(len + 1));
+	if (!sub)
+		return (NULL);
+	ft_strlcpy(sub, s + start, len + 1);
+	return (sub);
 }
