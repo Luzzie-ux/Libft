@@ -14,7 +14,7 @@
 //And make a loop through the characters of a string printing each of it
 //in its position on the string.
 
-int	main()
+void	count()
 {
 	int	i = 0;
 	char	str[] = "Hello,World!";
@@ -23,5 +23,10 @@ int	main()
 		printf("str[%d] = %c\n", i, str[i]);
 		i++;
 	}
-	return (0);
+}
+
+int	main()
+{
+	count();
+	return(0);
 }
