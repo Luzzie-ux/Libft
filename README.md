@@ -42,35 +42,37 @@ Here is the checklist:
 * [o] `ft_strchr`
 * [o] `ft_strrchr`
 * [o] `ft_strncmp`
-* [ ] `ft_memchr`
-* [ ] `ft_memcmp`
-* [ ] `ft_strnstr`
+* [o] `ft_memchr`
+* [o] `ft_memcmp`
+* [o] `ft_strnstr`
 
 ---
 
 # PHASE 6 — Memory Allocation
 
-* [ ] `ft_strdup`
-* [ ] `ft_calloc`
+* [o] `ft_strdup`
+* [o] `ft_calloc`
 
 ---
 
 # PHASE 7 — Advanced String Functions
 
-* [ ] `ft_substr`
-* [ ] `ft_strjoin`
-* [ ] `ft_strtrim`
-* [ ] `ft_split`
+* [o] `ft_substr`
+* [o] `ft_strjoin`
+* [o] `ft_strtrim`
+* [o] `ft_split`
 * [ ] `ft_itoa`
+* [ ] `ft_strmapi`
+* [ ] `ft_striteri`
 
 ---
 
 # PHASE 8 — Output Functions
 
-* [ ] `ft_putchar_fd`
-* [ ] `ft_putstr_fd`
-* [ ] `ft_putendl_fd`
-* [ ] `ft_putnbr_fd`
+* [o] `ft_putchar_fd`
+* [o] `ft_putstr_fd`
+* [o] `ft_putendl_fd`
+* [o] `ft_putnbr_fd`
 
 ---
 
@@ -96,7 +98,6 @@ For EACH function:
 2. Implement it
 3. Test it
 4. Compare with original
-5. Run valgrind
 
 ---
 
@@ -110,3 +111,4 @@ If you feel stuck:
   * off-by-one error
   * forgetting `'\0'`
   * bad malloc size
+  * or lack of semicolon: ;
