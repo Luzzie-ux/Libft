@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 18:30:24 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/04/21 18:38:26 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/04/23 15:13:55 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ char	*ft_strdup(const char *s)
 	while (s[len])
 		len++;
 	str = malloc(len + 1);
+	if (!str)
+		return (NULL);
 	p = str;
 	while (*s)
 		*p++ = *s++;

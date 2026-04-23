@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 13:17:18 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/04/20 19:52:41 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/04/23 12:03:25 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,12 @@ char	*ft_strchr(const char *s, int c)
 	i = 0;
 	while (s[i] != '\0')
 	{
-		if (s[i] == c)
-		{
+		if (s[i] == (char)c)
 			return ((char *)&s[i]);
-		}
 		i++;
 	}
-	if (c == '\0')
-	{
+	if ((char)c == '\0')
 		return ((char *)&s[i]);
-	}
 	return (NULL);
 }
 /*#include <stdio.h>

@@ -18,7 +18,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int	i;
 	int	start;
 	int	end;
-	char	result;
+	char	*result;
 
 	i = 0;
 	start = 0;
