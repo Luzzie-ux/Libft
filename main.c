@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 11:52:16 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/04/20 19:31:26 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/04/23 20:41:18 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static void	test_fstrlcpy(void)
 	char src[6] = "ellif";
 	char dst[6] = "souma";
 	
-	printf("1. strlcpy:\n");
+	printf("\n1. strlcpy:\n");
 	printf("Before: %s\n", dst);
 	ft_strlcpy(dst, src, sizeof(dst));
 	printf("After: %s\n\n", dst);
@@ -31,7 +31,7 @@ static void	test_fstrlcat(void)
 	char src[6] = "that!";
 	char dst[50]= "This and ";
 
-	printf("2. strlcat:\n");
+	printf("\n2. strlcat:\n");
 	printf("Before: %s\n", dst);
 	ft_strlcat(dst, src, sizeof(dst));
 	printf("After: %s\n\n", dst);
@@ -42,7 +42,7 @@ static void	test_fifis(void)
 	char	input[64];
 	char	c;
 
-	printf("3. isalpha / isdigit / isalnum:\n");
+	printf("\n3. isalpha / isdigit / isalnum:\n");
 	printf("Choose a character: ");
 	fgets(input, sizeof(input), stdin);
 	input[strcspn(input, "\n")] = '\0';
@@ -58,7 +58,7 @@ static void	test_fASCII(void)
 	char	input;
 	int		num;
 
-	printf("4.isascii & isprint:\n");
+	printf("\n4.isascii & isprint:\n");
 	printf("Choose an ascii character:\n");
 	scanf("%c", &input);
 
@@ -72,7 +72,7 @@ static void	test_fccase()
 	char	input;
 	int		num;
 
-	printf("5.tolower & toupper:\n");
+	printf("\n5.tolower & toupper:\n");
 	printf("Choose an character:\n");
 	scanf("%c", &input);
 
@@ -85,9 +85,9 @@ static void test_posix()
 {
 	const char	*search;
 	char		input[64];
-	char		c ;
+	char		c;
 
-	printf("6. strchr & strrchr:\n");
+	printf("\n6. strchr & strrchr:\n");
 	printf("Write a string: ");
 	fgets(input, sizeof(input), stdin);
 	input[strcspn(input, "\n")] = '\0';
@@ -106,12 +106,43 @@ static void test_posix()
 		printf("Character %c not found.\n", c);
 }
 
+static void test_split()
+{
+	char		**res;
+	char	input[64];
+	int			i;
+
+	i = 0;
+	printf("\n7. split:\n");
+	printf("Write a string: ");
+	fgets(input, sizeof(input), stdin);
+	input[strcspn(input, "\n")] = '\0';
+	res = ft_split(input, ' ');
+	while (res[i])
+	{
+		printf("str[%d]: %s\n", i, res[i]);
+		i++;
+	}
+}
+/*static void test_case2();
+static void test_case3();
+static void test_case4();*/
+
 int	main(void)
 {
 	int	option;
 	int ch;
-	printf("Starting main program...\n");
-	printf("select an option:\n1. strlcpy.\n2. strlcat.\n3. isalpha / isdigit / isalnum.\n4. isascii & isprint.\n5. tolower & toupper.\n6. strchr & strrchr.\n");
+	printf("Starting main program...\n"
+		"--------------------------\n");
+	printf("select an option:\n"
+		"1. strlcpy.\n"
+		"2. strlcat.\n"
+		"3. isalpha / isdigit / isalnum.\n"
+		"4. isascii & isprint.\n"
+		"5. tolower & toupper.\n"
+		"--------------------------\n"
+		"6. strchr & strrchr.\n"
+		"7. split\n");
 	scanf("%d", &option);
 	while ((ch = getchar()) != '\n' && ch != EOF)
 		continue;
@@ -135,8 +166,19 @@ int	main(void)
 		case 6:
 			test_posix();
 			break;
+		case 7:
+			test_split();
+			break;
+		case 8:
+			break;
+		case 9:
+			break;
+		case 0:
+			break;
 		default:
 			printf("Error: Select a valid option\n");
+			break;
 	}
-	return (printf("\nYou have reached the end of the program\nExiting..."));;
+	printf("\nYou have reached the end of the program\nExiting...");
+	return (0);
 }

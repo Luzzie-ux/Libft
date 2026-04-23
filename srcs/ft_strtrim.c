@@ -15,12 +15,10 @@ static int	iset(char c, const char *set)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int	i;
-	int	start;
-	int	end;
+	int		start;
+	int		end;
 	char	*result;
 
-	i = 0;
 	start = 0;
 	if (!s1 || !set)
 		return (NULL);
@@ -33,9 +31,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_strlcpy(result, s1 + start, end - start + 2);
 	return (result);
 }
-
-#include <stdio.h>
+/*#include <stdio.h>
 int	main(void)
 {
 	return 0;
-}
+}*/
