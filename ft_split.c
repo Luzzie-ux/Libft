@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 09:28:10 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/04/24 09:28:14 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/04/24 16:00:20 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,20 +109,3 @@ char	**ft_split(char const *s, char c)
 	ft(s, c, i, j, start, result);
 	return (result);
 }
-/*int	main(void)
-{
-	char **res;
-	int i;
-
-	res = ft_split("hello world 42", ' ');
-	if (!res)
-		return (1);
-
-	i = 0;
-	while (res[i])
-	{
-		printf("%s\n", res[i]);
-		i++;
-	}
-	return (0);
-}*/

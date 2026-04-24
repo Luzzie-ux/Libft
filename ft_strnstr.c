@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 13:59:00 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/04/22 11:19:46 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/04/24 16:00:05 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,22 +37,3 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
-/*
-#include <stdio.h>
-int    main(void)
-{
-    const char str[] = "Testando testando 123";
-    const char to_find[] = "";
-    const char str1 [] = "Estudando muito";
-    const char to_find1[] = "xyz";
-    const char str2[] = "A bee shouldnt be able to fly";
-    const char to_find2[] = "bee";
-
-	printf("%s\n", ft_strnstr(str, to_find, 5));
-	printf("%s\n", ft_strnstr(str2, to_find2, 5));
-	char *result = ft_strnstr(str1, to_find1, 10);
-	if (result)
-		printf("%s\n", result);
-	else
-		printf("Not found\n");
-}*/

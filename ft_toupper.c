@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/18 20:09:49 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/04/21 14:50:10 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/04/24 15:59:46 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,3 @@ int	ft_toupper(int c)
 		return (c);
 	return (0);
 }
-/*#include <stdio.h>
-int main ()
-{
-	char a = '&';
-	printf("%d\n", ft_toupper(a));
-	return 0;
-}*/
