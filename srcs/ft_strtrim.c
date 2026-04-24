@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/04/24 09:28:24 by rodrpere          #+#    #+#             */
+/*   Updated: 2026/04/24 14:30:53 by rodrpere         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static int	iset(char c, const char *set)
@@ -31,8 +43,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_strlcpy(result, s1 + start, end - start + 2);
 	return (result);
 }
-/*#include <stdio.h>
-int	main(void)
-{
-	return 0;
-}*/

@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 11:52:16 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/04/23 20:41:18 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/04/24 14:31:50 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,8 +124,26 @@ static void test_split()
 		i++;
 	}
 }
-/*static void test_case2();
-static void test_case3();
+static void test_trim()
+{
+	char *s1 = "   hello world   ";
+    char *set = " ";
+
+    char *result = ft_strtrim(s1, set);
+	printf("\n7. split:\n");
+    if (result)
+    {
+        printf("Original: '%s'\n", s1);
+        printf("Trimmed : '%s'\n", result);
+    }
+    else
+    {
+        printf("ft_strtrim returned NULL\n");
+    }
+
+    free(result);
+}
+/*static void test_case3();
 static void test_case4();*/
 
 int	main(void)
@@ -142,7 +160,8 @@ int	main(void)
 		"5. tolower & toupper.\n"
 		"--------------------------\n"
 		"6. strchr & strrchr.\n"
-		"7. split\n");
+		"7. ft_split\n"
+		"8. ft_strtrim\n");
 	scanf("%d", &option);
 	while ((ch = getchar()) != '\n' && ch != EOF)
 		continue;
@@ -170,6 +189,7 @@ int	main(void)
 			test_split();
 			break;
 		case 8:
+			test_trim();
 			break;
 		case 9:
 			break;
