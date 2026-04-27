@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/18 20:09:49 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/04/24 15:59:46 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/04/27 15:26:39 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,5 @@ int	ft_toupper(int c)
 		c = c - 32;
 		return (c);
 	}
-	else if (c >= 'A' && c <= 'Z')
-		return (c);
-	return (0);
+	return (c);
 }

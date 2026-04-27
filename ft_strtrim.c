@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 09:28:24 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/04/27 11:47:12 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/04/27 19:35:12 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (end > start && iset(s1[end], set))
 		end--;
 	result = (char *)malloc(end - start + 2);
+	if (!result)
+		return (NULL);
 	ft_strlcpy(result, s1 + start, end - start + 2);
 	return (result);
 }

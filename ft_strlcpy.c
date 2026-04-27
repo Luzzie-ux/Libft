@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 11:51:53 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/04/16 12:44:50 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/04/27 15:00:46 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		i++;
 		j++;
 	}
+	dst[i] = 0;
 	return (slen);
 }

@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 09:27:56 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/04/27 11:50:36 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/04/27 14:48:54 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,23 @@ static char	*helper(int n, char *ptr)
 	return (ptr);
 }
 
+static int	count(int n)
+{
+	int	digit;
+
+	if (n == 0)
+		return (1);
+	digit = 0;
+	if (n < 0)
+		digit = 1;
+	while (n != 0)
+	{
+		n = n / 10;
+		digit++;
+	}
+	return (digit);
+}
+
 char	*ft_itoa(int n)
 {
 	int		sign;
@@ -53,7 +70,7 @@ char	*ft_itoa(int n)
 	char	*ptr;
 
 	sign = 1;
-	buffer = (char *)malloc(sizeof(char) * 16);
+	buffer = (char *)malloc(sizeof(char) * count(n) + 1);
 	if (!buffer)
 		return (NULL);
 	if (n == 0)

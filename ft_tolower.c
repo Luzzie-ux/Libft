@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/18 21:01:14 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/04/20 13:05:32 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/04/27 15:26:36 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,5 @@ int	ft_tolower(int c)
 		c = c + 32;
 		return (c);
 	}
-	else if (c >= 'a' && c <= 'z')
-		return (c);
-	return (0);
+	return (c);
 }
