@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 09:28:24 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/04/24 14:30:53 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/04/27 11:47:12 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@ static int	iset(char c, const char *set)
 	int	i;
 
 	i = 0;
-	while(set[i]){
+	while (set[i])
+	{
 		if (set[i] == c)
 			return (1);
 		i++;

@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 09:27:56 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/04/24 15:44:12 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/04/27 11:50:36 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static char	*rev(char *s)
 {
 	char	temp;
 	int		start;
-	int		end; 
+	int		end;
 
 	end = ft_strlen(s) - 1;
 	start = 0;
@@ -31,9 +31,9 @@ static char	*rev(char *s)
 	return (s);
 }
 
-static char	*helper(int	n, char *ptr)
+static char	*helper(int n, char *ptr)
 {
-	int digit;
+	int	digit;
 
 	while (n != 0)
 	{
@@ -41,7 +41,7 @@ static char	*helper(int	n, char *ptr)
 		if (n < 0)
 			digit = digit * -1;
 		*ptr++ = digit + '0';
-		n = n/10;
+		n = n / 10;
 	}
 	return (ptr);
 }
@@ -54,7 +54,7 @@ char	*ft_itoa(int n)
 
 	sign = 1;
 	buffer = (char *)malloc(sizeof(char) * 16);
-	if(!buffer)
+	if (!buffer)
 		return (NULL);
 	if (n == 0)
 	{
@@ -66,7 +66,7 @@ char	*ft_itoa(int n)
 	{
 		sign = -1;
 	}
-	ptr = helper(n ,buffer);
+	ptr = helper(n, buffer);
 	if (sign == -1)
 		*ptr++ = '-';
 	*ptr = 0;

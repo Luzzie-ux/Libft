@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 12:08:42 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/04/22 13:25:20 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/04/27 11:48:10 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*snew;
 	int		slnew;
-	
+
 	if (!s1 || !s2)
 		return (NULL);
 	slnew = ft_strlen(s1) + ft_strlen(s2);
