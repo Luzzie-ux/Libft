@@ -5,12 +5,94 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/24 09:28:10 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/04/28 14:50:22 by rodrpere         ###   ########.fr       */
+/*   Created: 2026/04/28 18:45:06 by rodrpere          #+#    #+#             */
+/*   Updated: 2026/04/28 18:59:28 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static int	count_word(const char *str, char delimiter)
+{
+	int	i;
+	int	counter;
+
+	i = 0;
+	counter = 0;
+	while (str[i])
+	{
+		while (str[i] == delimiter)
+			i++;
+		if (str[i] != '\0')
+		{
+			counter++;
+			while (str[i] && str[i] != delimiter)
+				i++;
+		}
+	}
+	return (counter);
+}
+
+static char	*alloc(const char *s, int start, int end, char **res)
+{
+	int		i;
+	char	*sword;
+
+	i = 0;
+	sword = malloc((end - start + 1) * sizeof(char));
+	if (!sword)
+	{
+		while (res[i])
+			free(res[i++]);
+		free(res);
+		return (NULL);
+	}
+	while (end > start)
+		sword[i++] = s[start++];
+	sword[i] = 0;
+	return (sword);
+}
+
+static char	**ft(const char *s, char c, char **result)
+{
+	int	i;
+	int	j;
+	int	start;
+
+	i = 0;
+	j = 0;
+	start = -1;
+	while (s[i] || start >= 0)
+	{
+		if (s[i] && s[i] != c && start < 0)
+			start = i;
+		else if ((!s[i] || s[i] == c) && start >= 0)
+		{
+			result[j] = alloc(s, start, i, result);
+			if (!result[j])
+				return (NULL);
+			start = -1;
+			j++;
+		}
+		i += (s[i] != '\0');
+	}
+	result[j] = NULL;
+	return (result);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**result;
+
+	if (!s)
+		return (NULL);
+	result = ft_calloc(count_word(s, c) + 1, sizeof(char *));
+	if (!result)
+		return (NULL);
+	return (ft(s, c, result));
+}
+
+/*#include "libft.h"
 
 static int	count_word(const char *str, char delimiter)
 {
@@ -113,3 +195,4 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	return (result);
 }
+*/
