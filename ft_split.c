@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 09:28:10 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/04/28 13:48:08 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/04/28 14:50:22 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@ static char	**ft(const char *s, char c, int i, int j, char **result)
 	if (start >= 0)
 	{
 		result[j] = alloc(s, start, i);
-		if (!(result[j - 1]))
+		if (!(result[j]))
 			return (mclean(result));
 		j++;
 	}
@@ -104,9 +104,12 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	j = 0;
+	if (!s)
+		return (NULL);
 	result = ft_calloc(count_word(s, c) + 1, sizeof(char *));
 	if (!result)
 		return (NULL);
-	ft(s, c, i, j, result);
+	if (!ft(s, c, i, j, result))
+		return (NULL);
 	return (result);
 }
