@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 11:53:13 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/04/27 13:40:45 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/04/28 12:25:11 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,6 @@ int		ft_atoi(const char *nptr);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
-size_t	ft_strlen(const char *s);
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
-
 void	ft_bzero(void *s, size_t n);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putendl_fd(char *s, int fd);
@@ -50,8 +46,13 @@ char	**ft_split(char const *s, char c);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 char	*ft_substr(char const *s, unsigned int start, size_t len);
-//char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_strnstr(const char *big, const char *little, size_t len);
+
+size_t	ft_strlen(const char *s);
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 
 #endif
