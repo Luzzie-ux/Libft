@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 10:23:04 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/04/29 15:38:05 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/04/29 17:08:11 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 t_list	*ft_lstnew(void *content)
 {
 	t_list	*box;
+
 	if (!content)
 		return (NULL);
 	box = malloc(sizeof(t_list));
