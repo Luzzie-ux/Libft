@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 11:53:13 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/04/28 12:25:11 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/04/29 09:59:37 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,9 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
 void	ft_bzero(void *s, size_t n);
 void	ft_putnbr_fd(int n, int fd);
-void	ft_putendl_fd(char *s, int fd);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
 void	*ft_memset(void *s, int c, size_t n);
 void	*ft_calloc(size_t nmemb, size_t size);
 void	*ft_memchr(const void *s, int c, size_t n);
