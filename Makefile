@@ -6,7 +6,7 @@
 #    By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/04/16 11:52:23 by rodrpere          #+#    #+#              #
-#    Updated: 2026/04/28 12:25:44 by rodrpere         ###   ########.fr        #
+#    Updated: 2026/04/29 13:13:06 by rodrpere         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,10 +19,14 @@ SRCS = 	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 	ft_strrchr.c ft_strncmp.c ft_memchr.c ft_memcmp.c ft_strnstr.c \
 	ft_atoi.c ft_calloc.c ft_strdup.c ft_substr.c ft_strjoin.c \
 	ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c \
-	ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
+	ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
+	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
+	ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c 
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
+
+bonus: $(NAME)
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS) $^
@@ -38,4 +42,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus
