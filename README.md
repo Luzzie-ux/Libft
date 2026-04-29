@@ -61,9 +61,9 @@ Here is the checklist:
 * [o] `ft_strjoin`
 * [o] `ft_strtrim`
 * [o] `ft_split`
-* [ ] `ft_itoa`
-* [ ] `ft_strmapi`
-* [ ] `ft_striteri`
+* [o] `ft_itoa`
+* [o] `ft_strmapi`
+* [o] `ft_striteri`
 
 ---
 
