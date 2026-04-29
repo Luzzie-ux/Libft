@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/28 18:45:06 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/04/28 18:59:28 by rodrpere         ###   ########.fr       */
+/*   Created: 2026/04/29 09:46:57 by rodrpere          #+#    #+#             */
+/*   Updated: 2026/04/29 09:47:38 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 static int	count_word(const char *str, char delimiter)
 {
-	int	i;
-	int	counter;
+	size_t	counter;
+	int		i;
 
 	i = 0;
 	counter = 0;
@@ -33,7 +33,7 @@ static int	count_word(const char *str, char delimiter)
 	return (counter);
 }
 
-static char	*alloc(const char *s, int start, int end, char **res)
+static char	*alloc(const char *s, int start, int end, char **string)
 {
 	int		i;
 	char	*sword;
@@ -42,9 +42,9 @@ static char	*alloc(const char *s, int start, int end, char **res)
 	sword = malloc((end - start + 1) * sizeof(char));
 	if (!sword)
 	{
-		while (res[i])
-			free(res[i++]);
-		free(res);
+		while (string[i])
+			free(string[i++]);
+		free(string);
 		return (NULL);
 	}
 	while (end > start)
@@ -55,9 +55,9 @@ static char	*alloc(const char *s, int start, int end, char **res)
 
 static char	**ft(const char *s, char c, char **result)
 {
-	int	i;
-	int	j;
-	int	start;
+	int		i;
+	int		j;
+	int		start;
 
 	i = 0;
 	j = 0;
@@ -91,108 +91,3 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	return (ft(s, c, result));
 }
-
-/*#include "libft.h"
-
-static int	count_word(const char *str, char delimiter)
-{
-	size_t	counter;
-	int		i;
-
-	i = 0;
-	counter = 0;
-	while (str[i])
-	{
-		while (str[i] == delimiter)
-			i++;
-		if (str[i] != '\0')
-		{
-			counter++;
-			while (str[i] && str[i] != delimiter)
-				i++;
-		}
-	}
-	return (counter);
-}
-
-static char	*alloc(const char *s, int start, int end)
-{
-	int		i;
-	char	*sword;
-
-	i = 0;
-	sword = malloc((end - start + 1) * sizeof(char));
-	if (!sword)
-		return (NULL);
-	while (end > start)
-	{
-		sword[i] = s[start];
-		i++;
-		start++;
-	}
-	sword[i] = 0;
-	return (sword);
-}
-
-static char	**mclean(char **string)
-{
-	int	i;
-
-	i = 0;
-	while (string[i])
-	{
-		free(string[i]);
-		i++;
-	}
-	free(string);
-	return (NULL);
-}
-
-static char	**ft(const char *s, char c, int i, int j, char **result)
-{
-	int		start;
-
-	start = -1;
-	while (s[i])
-	{
-		if (s[i] != c && start < 0)
-			start = i;
-		else if (s[i] == c && start >= 0)
-		{
-			result[j] = alloc(s, start, i);
-			if (!(result[j]))
-				return (mclean(result));
-			start = -1;
-			j++;
-		}
-		i++;
-	}
-	if (start >= 0)
-	{
-		result[j] = alloc(s, start, i);
-		if (!(result[j]))
-			return (mclean(result));
-		j++;
-	}
-	result[j] = NULL;
-	return (result);
-}
-
-char	**ft_split(char const *s, char c)
-{
-	int		i;
-	int		j;
-	char	**result;
-
-	i = 0;
-	j = 0;
-	if (!s)
-		return (NULL);
-	result = ft_calloc(count_word(s, c) + 1, sizeof(char *));
-	if (!result)
-		return (NULL);
-	if (!ft(s, c, i, j, result))
-		return (NULL);
-	return (result);
-}
-*/
