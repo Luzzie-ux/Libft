@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 17:17:32 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/04/29 17:34:56 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/04/30 16:02:36 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,17 @@
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*cleaner;
+	t_list	*next;
 
 	if (!lst || !del)
 		return ;
-	while (*lst)
+	cleaner = *lst;
+	while (cleaner)
 	{
-		cleaner = (*lst)->next;
-		(*del)((*lst)->content);
-		free(lst);
-		*lst = cleaner;
+		next = cleaner->next;
+		(*del)((*cleaner).content);
+		free(cleaner);
+		cleaner = next;
 	}
+	*lst = NULL;
 }

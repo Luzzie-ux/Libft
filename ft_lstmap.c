@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/30 14:54:15 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/04/30 15:12:41 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/04/30 16:05:48 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*node;
-	t_list	**nlist;
+	t_list	*nlist;
 	void	*content;
 
 	if (!lst || !f || !del)
