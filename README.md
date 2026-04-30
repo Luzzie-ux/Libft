@@ -15,11 +15,11 @@ The implemented functions are in the end of this readme
 
 To compile the library, type the command `make` in the shell while inside the libft dir, shortly after an `libft.a` and `*.o` files will be created on the root.
 
-To clean .o files, types `make clean`, to clean all type `make fclean`, in the case of needed to recompile, write `make re` to do so.
+To clean .o files, types `make clean`, to clean all .o and .a type `make fclean`, in the case of needed recompiling, write `make re` to do so.
 
-In order to use this library with any of your `.c` file that might need it, type `gcc your_file.c libft.a` or `cc your_file.c libft.a` while inside this directory.
+In order to use this library with any of your `.c` file that might need it, type `gcc your_file.c libft.a` or `cc your_file.c -L. -lft` while inside this directory.
 
-In the case of using this libft outside of its own dir, type `gcc your_file.c -L . -lft` or `cc your_file.c -L . -lft` to do so(`-L` means include library, `.` means the current directory and `-lft` call the `libft.a`).
+In the case of using this libft outside of its own dir, type `gcc your_file.c -L../Libft -lft` or `cc your_file.c -L../Libft -lft` to do so(`-L` adds the dir to the library search path, `.` means the current directory and `-lft` tells the linker to look for `libft.a`).
 
 The library is accompanied by a header file called `libft.h`, which contains prototypes for all the functions in the library. To use the library in your project, include the header file and link to the library as described above.
 
