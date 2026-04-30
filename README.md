@@ -80,15 +80,15 @@ Here is the checklist:
 
 # PHASE 9 — Linked Lists
 
-* [ ] `ft_lstnew`
-* [ ] `ft_lstadd_front`
-* [ ] `ft_lstsize`
-* [ ] `ft_lstlast`
-* [ ] `ft_lstadd_back`
-* [ ] `ft_lstdelone`
-* [ ] `ft_lstclear`
-* [ ] `ft_lstiter`
-* [ ] `ft_lstmap`
+* [o] `ft_lstnew`
+* [o] `ft_lstadd_front`
+* [o] `ft_lstsize`
+* [o] `ft_lstlast`
+* [o] `ft_lstadd_back`
+* [o] `ft_lstdelone`
+* [o] `ft_lstclear`
+* [o] `ft_lstiter`
+* [o] `ft_lstmap`
 
 ---
 
