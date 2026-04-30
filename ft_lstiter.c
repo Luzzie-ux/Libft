@@ -6,7 +6,7 @@
 /*   By: rodrpere <rodrpere@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 17:35:33 by rodrpere          #+#    #+#             */
-/*   Updated: 2026/04/29 17:40:18 by rodrpere         ###   ########.fr       */
+/*   Updated: 2026/04/30 14:53:59 by rodrpere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (!lst | !f)
+	if (!lst || !f)
 		return ;
 	while (lst)
 	{
