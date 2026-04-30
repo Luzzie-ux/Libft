@@ -1,116 +1,42 @@
-*This is my LIBFT readme*
+*This project has been created as part of the 42 curriculum by rodrpere*
 
-# Libft
+# Description
 This is my shot at building a custom standard library of all the C language functions for a reviewing of my coding knowledge
 it should be following a simple way to do them and in the process, understand the language better
 
-Here is the checklist:
-# PHASE 1 — Core Basics
+# Instructions
+To compile this library simply run the command *make* in the shell or terminal inside the directory of the library and a libft.a file will be created on the root of the dir, To use the library with any .c file that might need it, simply run *gcc your_file.c libft.a* or*cc your_file.c libft.a*
 
-* [o] `ft_strlen`
-* [o] `ft_memset`
-* [o] `ft_bzero`
+# Resources
+In the making of this library, Ai was used to learn the concepts needed to rebuild each function, and spot potential edge cases/errors that couldnt be found by me and my peers. For testing and debugging each function, the website PythonTutor was utilized to better visualization of the code and how it everything interacts, the Francinette, a code tester created by a 42 student for other students helped me learn how to think of potential errors that could happen if for example, a dynamic memory allocation made using the function malloc(3) failed. In this case if the allocation failed the function should return NULL or if in the case of a function with its return type as void, just return . Alongside these tools the websites W3Schools(https://www.w3schools.com/), StackOverflow(https://www.stackoverflow.com/), GeeksforGeeks(https://www.geeksforgeeks.org/) and my peers, helped me learn what was needed to better understand the language C and its inner workings.
 
----
+# Functions implemented
 
-# PHASE 2 — Core Memory Handling
-
-* [o] `ft_memcpy`
-* [o] `ft_memmove`
-
----
-
-# PHASE 3 — String Copying
-
-* [o] `ft_strlcpy`
-* [o] `ft_strlcat`
-
----
-
-# PHASE 4 — Character Functions
-
-* [o] `ft_isalpha`
-* [o] `ft_isdigit`
-* [o] `ft_isalnum`
-* [o] `ft_isascii`
-* [o] `ft_isprint`
-* [o] `ft_toupper`
-* [o] `ft_tolower`
-
----
-
-# PHASE 5 — Searching & Comparing
-
-* [o] `ft_strchr`
-* [o] `ft_strrchr`
-* [o] `ft_strncmp`
-* [o] `ft_memchr`
-* [o] `ft_memcmp`
-* [o] `ft_strnstr`
+|Part 1 - Libc Function | Part 2 - Additional functions | Part 3 - Linked Lists |
+|-----------------------|-------------------------------|-----------------------|
+|   ft_isalpha          |       ft_substr               |   ft_lstnew           |
+|   ft_isdigit          |       ft_strjoin              |   ft_lstadd_front     |
+|   ft_isalnum          |       ft_strtrim              |   ft_lstsize          |
+|   ft_isascii          |       ft_split                |   ft_lstlast          |
+|   ft_isprint          |       ft_itoa                 |   ft_lstadd_back      |
+|   ft_strlen           |       ft_strmapi              |   ft_lstdelone        |
+|   ft_memset           |       ft_striteri             |   ft_lstclear         |
+|   ft_bzero            |       ft_putchar_fd           |   ft_lstiter          |
+|   ft_memcpy           |       ft_putstr_fd            |   ft_lstmap           |
+|   ft_memmove          |       ft_putendl_fd           |                       |
+|   ft_strlcpy          |       ft_putnbr_fd            |                       |
+|   ft_strlcat          |                               |                       |
+|   ft_toupper          |                               |                       |
+|   ft_tolower          |                               |                       |
+|   ft_strchr           |                               |                       |
+|   ft_strrchr          |                               |                       |
+|   ft_strncmp          |                               |                       |
+|   ft_memchr           |                               |                       |
+|   ft_memcmp           |                               |                       |
+|   ft_strnstr          |                               |                       |
+|   ft_atoi             |                               |                       |
+|   ft_calloc           |                               |                       |
+|   ft_strdup           |                               |                       |
 
 ---
 
-# PHASE 6 — Memory Allocation
-
-* [o] `ft_strdup`
-* [o] `ft_calloc`
-
----
-
-# PHASE 7 — Advanced String Functions
-
-* [o] `ft_substr`
-* [o] `ft_strjoin`
-* [o] `ft_strtrim`
-* [o] `ft_split`
-* [o] `ft_itoa`
-* [o] `ft_strmapi`
-* [o] `ft_striteri`
-
----
-
-# PHASE 8 — Output Functions
-
-* [o] `ft_putchar_fd`
-* [o] `ft_putstr_fd`
-* [o] `ft_putendl_fd`
-* [o] `ft_putnbr_fd`
-
----
-
-# PHASE 9 — Linked Lists
-
-* [o] `ft_lstnew`
-* [o] `ft_lstadd_front`
-* [o] `ft_lstsize`
-* [o] `ft_lstlast`
-* [o] `ft_lstadd_back`
-* [o] `ft_lstdelone`
-* [o] `ft_lstclear`
-* [o] `ft_lstiter`
-* [o] `ft_lstmap`
-
----
-
-# How to use this roadmap properly
-
-For EACH function:
-
-1. Read `man function_name`
-2. Implement it
-3. Test it
-4. Compare with original
-
----
-
-# Realistic progression tip
-
-If you feel stuck:
-
-* It’s almost always one of these:
-
-  * pointer confusion
-  * off-by-one error
-  * forgetting `'\0'`
-  * bad malloc size
-  * or lack of semicolon: ;
