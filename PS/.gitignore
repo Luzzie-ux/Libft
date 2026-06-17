@@ -1,0 +1,7 @@
+a.out
+*.a
+*.o
+push_swap
+test/a.out
+*.txt
+*.py
